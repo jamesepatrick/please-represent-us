@@ -27,6 +27,9 @@
 ## Emacs auto save
 *#
 
+## Mac files
+*.DS_Store
+
 ## Ignore byebug_history
 .byebug_history
 
