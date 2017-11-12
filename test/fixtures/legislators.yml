@@ -1,19 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  firstname: MyString
-  lastname: MyString
-  bioguide_id: MyString
-  state: MyString
-  district: MyString
-  chamber: MyString
-  last_updated: 2017-10-30 22:44:33
+alice:
+  id: 1
+  firstname: Alice
+  lastname: Carrol
+  bioguide_id: C00001
+  state: IN
+  district: 1
+  chamber: house
+  next_update: 2017-10-30 22:44:33
 
-two:
-  firstname: MyString
-  lastname: MyString
-  bioguide_id: MyString
-  state: MyString
-  district: MyString
-  chamber: MyString
-  last_updated: 2017-10-30 22:44:33
+bob:
+  id: 2
+  firstname: Bob
+  lastname: Smith
+  bioguide_id: S0001
+  state:  IN
+  district:
+  chamber: senate
+  next_update: 2017-10-30 22:44:33

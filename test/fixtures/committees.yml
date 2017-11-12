@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+hsif:
+  id: 1
+  name: Committee on Energy and Commerce
+  code: hsif
+  chamber: house
+  url: https://energycommerce.house.gov/
+  parent_id:
+
+hsif02:
+  id: 2
+  name: Oversight and Investigations
+  code: hsif
+  chamber: house
+  url: https://energycommerce.house.gov/
+  parent_id: 1

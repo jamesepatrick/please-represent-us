@@ -51,6 +51,7 @@ end
 group :test do
   gem 'connection_pool'
   gem 'launchy'
+  gem 'minitest-rails-capybara'
   gem 'minitest-reporters'
   gem 'mocha'
   gem 'poltergeist'
