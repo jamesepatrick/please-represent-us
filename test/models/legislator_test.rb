@@ -12,6 +12,13 @@ describe Legislator do
     assert legislator.valid?
   end
 
+  it 'must have a uniquie id' do
+    bob = legislators(:bob)
+    assert bob.valid?
+    bob.bioguide_id = legislators(:alice).bioguide_id
+    refute bob.valid?
+  end
+
   it 'requires district as well if the chamber is house' do
     # Alice is in the house
     legislator = legislators(:alice)

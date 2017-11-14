@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171112230108) do
+ActiveRecord::Schema.define(version: 20171114055319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20171112230108) do
     t.datetime "next_update", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bioguide_id"], name: "index_legislators_on_bioguide_id"
+    t.index ["bioguide_id"], name: "index_legislators_on_bioguide_id", unique: true
     t.index ["district"], name: "index_legislators_on_district"
     t.index ["state"], name: "index_legislators_on_state"
   end

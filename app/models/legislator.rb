@@ -4,6 +4,7 @@ class Legislator < ApplicationRecord
   enum chamber: { house: 'house', senate: 'senate' }
   has_many :committee_memberships
 
+  validates_uniqueness_of :bioguide_id
   validates_presence_of :firstname, :lastname, :bioguide_id, :state, :chamber
   validates :district, presence: true, if: proc { |legislator| legislator.state && legislator.house? }
 
