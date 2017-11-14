@@ -9,7 +9,7 @@ hsif:
 
 hsif02:
   name: Oversight and Investigations
-  code: hsif
+  code: hsif02
   chamber: house
   url: https://energycommerce.house.gov/
   parent: hsif
