@@ -36,8 +36,12 @@ describe Legislator do
     refute legislators(:bob).require_update?
   end
 
-  it 'has many multiple memberships' do
+  it 'has many committee memberships' do
     # Bob is a member of both hsif & hsif02
     assert_equal legislators(:bob).committee_memberships.size, 2
+  end
+
+  it 'has many committees through committee memberships' do
+    assert_equal legislators(:bob).committees.size, 2
   end
 end
