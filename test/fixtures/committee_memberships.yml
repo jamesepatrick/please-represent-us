@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  committee: hsif
+  legislator: alice
+  position: Chair
+
+two:
+  committee: hsif02
+  legislator: bob
+  position: Chair
+
+three:
+  committee: hsif
+  legislator: bob
+  position: 2nd

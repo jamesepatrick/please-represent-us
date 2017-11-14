@@ -8,23 +8,29 @@ describe Legislator do
   it 'requires firstname, lastname, bioguide, state, & chamber' do
     legislator = Legislator.new
     refute legislator.valid?
-    legislator = Legislator.new(firstname: 'Alice',
-      lastname: 'Smith',
-      bioguide_id: 'S0000',
-      state: 'GA',
-      chamber: 'senate')
+    legislator = legislators(:bob)
     assert legislator.valid?
   end
 
   it 'requires district as well if the chamber is house' do
-    legislator = Legislator.new(firstname: 'Alice',
-      lastname: 'Smith',
-      bioguide_id: 'S0000',
-      state: 'GA',
-      chamber: 'house')
+    # Alice is in the house
+    legislator = legislators(:alice)
+    legislator.district = nil
     refute legislator.valid?
 
     legislator.district = 1
     assert legislator.valid?
+  end
+
+  it 'will say it should be updated when' do
+    # Alice's next update should be 1 month ago.
+    assert legislators(:alice).require_update?
+    # Bob's next update should be 1 month in the future
+    refute legislators(:bob).require_update?
+  end
+
+  it 'has many multiple memberships' do
+    # Bob is a member of both hsif & hsif02
+    assert_equal legislators(:bob).committee_memberships.size, 2
   end
 end

@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 alice:
-  id: 1
+  # id: 1
   firstname: Alice
   lastname: Carrol
   bioguide_id: C00001
   state: IN
   district: 1
   chamber: house
-  next_update: 2017-10-30 22:44:33
+  next_update: <%= 1.months.ago %>
 
 bob:
-  id: 2
+  # id: 2
   firstname: Bob
   lastname: Smith
   bioguide_id: S0001
   state:  IN
   district:
   chamber: senate
-  next_update: 2017-10-30 22:44:33
+  next_update: <%= 1.months.since %>
