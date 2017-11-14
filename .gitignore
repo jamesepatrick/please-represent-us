@@ -26,7 +26,7 @@
 /lib/bundler/man/
 
 ## Emacs auto save
-*.#
+\.\#.*
 
 ## Mac files
 *.DS_Store
