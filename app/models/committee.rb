@@ -3,5 +3,6 @@ class Committee < ApplicationRecord
                            foreign_key: 'parent_id'
   belongs_to :parent, class_name: 'Committee', optional: true
 
+  validates_uniqueness_of :code
   validates_presence_of :chamber, :code, :name
 end
