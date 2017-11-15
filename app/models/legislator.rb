@@ -1,7 +1,8 @@
 class Legislator < ApplicationRecord
-
   include ActiveModel::Validations
+
   enum chamber: { house: 'house', senate: 'senate' }
+  has_one  :contact_info
   has_many :committee_memberships
   has_many :committees, through: :committee_memberships
 

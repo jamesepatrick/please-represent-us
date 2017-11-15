@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114061622) do
+ActiveRecord::Schema.define(version: 20171114062403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 20171114061622) do
     t.index ["parent_id"], name: "index_committees_on_parent_id"
   end
 
+  create_table "contact_infos", force: :cascade do |t|
+    t.string "fax"
+    t.string "phone"
+    t.string "facebook"
+    t.string "twitter"
+    t.string "youtube"
+    t.bigint "legislator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["legislator_id"], name: "index_contact_infos_on_legislator_id"
+  end
+
   create_table "legislators", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
@@ -54,4 +66,5 @@ ActiveRecord::Schema.define(version: 20171114061622) do
 
   add_foreign_key "committee_memberships", "committees"
   add_foreign_key "committee_memberships", "legislators"
+  add_foreign_key "contact_infos", "legislators"
 end

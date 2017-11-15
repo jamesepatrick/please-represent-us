@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+alice:
+  fax: 800-555-1234
+  phone: 800-555-2345
+  facebook: alice
+  twitter: alice
+  youtube: alice
+  legislator: alice
+
+bob:
+  fax: 800-555-4321
+  phone: 800-555-5432
+  facebook: bob
+  twitter: bob
+  youtube: bob
+  legislator: bob
